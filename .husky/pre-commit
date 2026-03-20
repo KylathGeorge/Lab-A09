@@ -1,0 +1,8 @@
+# 1. Update with terraform fmt (This overwrites the file)
+Set-Content -Path .husky/pre-commit -Value "terraform -chdir=infrastructure fmt -check -recursive" -Encoding utf8
+
+# 2. Add terraform validate (This appends to the file)
+Add-Content -Path .husky/pre-commit -Value "terraform -chdir=infrastructure validate" -Encoding utf8
+
+# 3. Add tflint (This appends to the file)
+Add-Content -Path .husky/pre-commit -Value "tflint --chdir=infrastructure" -Encoding utf8
