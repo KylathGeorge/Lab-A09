@@ -27,3 +27,4 @@ resource "azurerm_storage_account" "test_storage" {
   location                 = azurerm_resource_group.hybrida09.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
+}
